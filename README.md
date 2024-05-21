@@ -2,15 +2,15 @@
 
 git clone : https://github.com/krishiiitp/QuickChat.git
 
-## Description
+# Description
 
 QuickChat is a real-time, scalable chat application addressing horizontal scaling challenges in socket.io, enabling communication across servers. Leveraged Redis with Pub/Sub to relay messages efficiently among users. Additionally, utilized Kafka for buffering chat data, preventing database overload during peak usage. Data is seamlessly sent to PostgreSQL for durable storage, ensuring uninterrupted chat functionality.
 
-## Problem We Are Solving:
+# Problem We Are Solving:
 
 Horizontal Scaling: Users connected to different servers could not communicate in real-time. Database Write Load: High concurrent chatting could overwhelm the database, causing temporary downtimes.
 
-### How We Are Solving It:
+# How We Are Solving It:
 
 1.Socket.io for Real-Time Communication: Initially, Socket.io allowed clients to emit messages to the server.
 
