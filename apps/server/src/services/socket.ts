@@ -1,6 +1,6 @@
 import {Server} from "socket.io";
 import Redis from "ioredis";
-import {redis_host_id,redis_pwd} from "./secrets"
+import {redis_host_id,redis_pwd} from "./secrets";
 const pub = new Redis({
     host: redis_host_id,
     port: 21399,

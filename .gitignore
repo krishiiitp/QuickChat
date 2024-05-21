@@ -38,4 +38,4 @@ yarn-error.log*
 *.pem
 
 
-apps/server/src/services/secrets
+./apps/server/src/services/secrets.ts
