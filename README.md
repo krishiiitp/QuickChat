@@ -17,12 +17,3 @@ Horizontal Scaling: Users connected to different servers could not communicate i
 2.Redis Pub/Sub for Cross-Server Communication: Messages emitted from clients are published to Redis. Redis Pub/Sub mechanism broadcasts these messages to all connected clients, enabling cross-server communication.
 
 3.Kafka for Database Load Balancing: Kafka acts as a message buffer to handle high write loads. Messages are stored in Kafka (Producer) before being sent to the PostgreSQL database for durable storage.
-
-
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
