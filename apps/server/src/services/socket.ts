@@ -1,16 +1,17 @@
 import {Server} from "socket.io";
 import Redis from "ioredis";
+import {redis_host_id,redis_pwd} from "./secrets"
 const pub = new Redis({
-    host: "quick-chat-quick-chat-2.i.aivencloud.com",
+    host: redis_host_id,
     port: 21399,
     username: "default",
-    password: "AVNS_tZj29YHPCdHUV8mnAYG",
+    password: redis_pwd,
 });
   const sub = new Redis({
-    host: "quick-chat-quick-chat-2.i.aivencloud.com",
+    host: redis_host_id,
     port: 21399,
     username: "default",
-    password: "AVNS_tZj29YHPCdHUV8mnAYG",
+    password: redis_pwd,
 });
 class SocketService {
     private _io: Server;
