@@ -1,6 +1,7 @@
 import {Server} from "socket.io";
 import Redis from "ioredis";
 import {redis_host_id,redis_pwd} from "./secrets";
+import prismaClient from "./prisma";
 const pub = new Redis({
     host: redis_host_id,
     port: 21399,
@@ -36,9 +37,15 @@ class SocketService {
                 await pub.publish('MESSAGES',JSON.stringify({message}));
             });
         });
-        sub.on('message',(channel,message)=>{
+        sub.on('message',async (channel,message)=>{
             if(channel==='MESSAGES'){
                 io.emit('message',message);
+                //PostgreSQL DB store
+                await prismaClient.message.create({
+                    data: {
+                        text : message,
+                    }
+                });
             }
         })
     }
